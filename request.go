@@ -3,9 +3,9 @@ package request
 import (
 	"encoding/json"
 	"errors"
+	"github.com/theripe/request/data"
 	"io/ioutil"
 	"net/http"
-	"request/data"
 	"strconv"
 	"time"
 )
