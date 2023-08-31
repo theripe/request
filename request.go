@@ -96,6 +96,13 @@ func (r *Request) Get(uri string, headers map[string]string, params map[string]s
 	if err != nil {
 		return nil, err
 	}
+	if headers != nil {
+		header := http.Header{}
+		for key, value := range headers {
+			header.Add(key, value)
+		}
+		req.Header = header
+	}
 
 	// Begin get Request
 	res, err := r.client.Do(req)
