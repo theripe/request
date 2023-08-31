@@ -12,7 +12,6 @@ func TestAddressStruct(t *testing.T) {
 	address := &Address{
 		Ip:   "192.168.0.1",
 		Port: 8901,
-		uri:  "/test",
 	}
 	fmt.Println(address)
 }

@@ -4,7 +4,7 @@ package request
 // license that can be found in the LICENSE file.
 
 type Address struct {
-	Ip   string
-	Port int64
-	uri  string
+	Ip       string
+	Port     int64
+	Protocol string
 }
