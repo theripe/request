@@ -89,8 +89,9 @@ func (r *Request) Get(uri string, headers map[string]string, params map[string]s
 	if len(params) != 0 {
 		url += "?"
 		for key, value := range params {
-			url += key + ":" + value
+			url += key + ":" + value + "&"
 		}
+		url = url[:len(url)-1]
 	}
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
